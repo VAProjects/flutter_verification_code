@@ -48,7 +48,7 @@ class VerificationCode extends StatefulWidget {
   final bool digitsOnly;
 
   //To set the value of textfield
-  final String code;
+  final String? code;
 
   VerificationCode({
     required this.onCompleted,
@@ -108,7 +108,7 @@ class _VerificationCodeState extends State<VerificationCode> {
     return verifyCode;
   }
 // To set the textfield value in UI
-  void setInputItemText(String value){
+  void setInputItemText(String? value){
     print('setInputItemText value=>$value');
     if(value!=null){
       for(int i=0; i< widget.length;i++){
