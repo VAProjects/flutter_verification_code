@@ -115,7 +115,7 @@ class _VerificationCodeState extends State<VerificationCode> {
         String s= value[i];
         print('setInputItemText i=$i s=>$s');
         setState(() {
-          _listControllerText[i].text[i](s);
+          _listControllerText[i].text=s;
         });
       }
     }
