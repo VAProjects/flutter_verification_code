@@ -90,6 +90,7 @@ class _VerificationCodeState extends State<VerificationCode> {
       _listControllerText.add(TextEditingController());
       _code.add('');
     }
+    print('_VerificationCodeState value=>$value');
     if(this.value!=null && this.value.length>0)
       setInputItemText(this.value);
     super.initState();
