@@ -48,7 +48,7 @@ class VerificationCode extends StatefulWidget {
   final bool digitsOnly;
 
   //To set the value of textfield
-  final value;
+  final String? value;
 
   VerificationCode({
     required this.onCompleted,
@@ -90,9 +90,9 @@ class _VerificationCodeState extends State<VerificationCode> {
       _listControllerText.add(TextEditingController());
       _code.add('');
     }
-    print('_VerificationCodeState value=>$value');
-    if(this.value!=null && this.value.length>0)
-      setInputItemText(this.value);
+    print('_VerificationCodeState value=>${widget.value}');
+    if(widget.value!=null && widget.value.length>0)
+      setInputItemText(widget.value);
     super.initState();
   }
 
