@@ -48,7 +48,7 @@ class VerificationCode extends StatefulWidget {
   final bool digitsOnly;
 
   //To set the value of textfield
-  final String? code;
+  final String code;
 
   VerificationCode({
     required this.onCompleted,
