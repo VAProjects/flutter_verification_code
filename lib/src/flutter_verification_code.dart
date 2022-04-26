@@ -47,6 +47,9 @@ class VerificationCode extends StatefulWidget {
   ///accept only digit inputs from keyboard
   final bool digitsOnly;
 
+  //To set the value of textfield
+  final value;
+
   VerificationCode({
     required this.onCompleted,
     required this.onEditing,
@@ -63,6 +66,7 @@ class VerificationCode extends StatefulWidget {
     this.clearAll,
     this.isSecure = false,
     this.digitsOnly = false,
+    this.value,
   });
 
   @override
@@ -86,9 +90,9 @@ class _VerificationCodeState extends State<VerificationCode> {
       _listControllerText.add(TextEditingController());
       _code.add('');
     }
-    // print('_VerificationCodeState value=>$value');
-    // if(this.value!=null && this.value.length>0)
-    //   setInputItemText(this.value);
+    print('_VerificationCodeState value=>$value');
+    if(this.value!=null && this.value.length>0)
+      setInputItemText(this.value);
     super.initState();
   }
 
@@ -104,7 +108,7 @@ class _VerificationCodeState extends State<VerificationCode> {
     return verifyCode;
   }
 // To set the textfield value in UI
-  static void setInputItemText(String value){
+  void setInputItemText(String value){
     print('setInputItemText value=>$value');
     for(int i=0; i< widget.length;i++){
       String s= code[i];
