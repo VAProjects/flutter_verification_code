@@ -91,7 +91,7 @@ class _VerificationCodeState extends State<VerificationCode> {
       _code.add('');
     }
     print('_VerificationCodeState value=>${widget.code}');
-    if(widget.code!=null && widget.code?.length>0)
+    if(widget.code!=null)
       setInputItemText(widget.code);
     super.initState();
   }
@@ -110,13 +110,16 @@ class _VerificationCodeState extends State<VerificationCode> {
 // To set the textfield value in UI
   void setInputItemText(String value){
     print('setInputItemText value=>$value');
-    for(int i=0; i< widget.length;i++){
-      String s= code[i];
-      print('setInputItemText i=$i s=>$s');
-      setState(() {
-        _listControllerText[i].text(s);
-      });
+    if(value!=null){
+      for(int i=0; i< widget.length;i++){
+        String s= code[i];
+        print('setInputItemText i=$i s=>$s');
+        setState(() {
+          _listControllerText[i].text(s);
+        });
+      }
     }
+
   }
 
   Widget _buildInputItem(int index) {
