@@ -91,7 +91,7 @@ class _VerificationCodeState extends State<VerificationCode> {
       _code.add('');
     }
     print('_VerificationCodeState value=>${widget.code}');
-    if(widget.code!=null && widget.code.length>0)
+    if(widget.code!=null && widget.code?.length>0)
       setInputItemText(widget.code);
     super.initState();
   }
