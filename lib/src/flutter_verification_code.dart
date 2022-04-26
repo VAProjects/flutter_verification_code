@@ -111,7 +111,7 @@ class _VerificationCodeState extends State<VerificationCode> {
   void setInputItemText(String? value){
     print('setInputItemText value=>$value');
     if(value!=null){
-      for(int i=0; i< widget.length;i++){
+      for(int i=0; i< value.length;i++){
         String s= code[i];
         print('setInputItemText i=$i s=>$s');
         setState(() {
