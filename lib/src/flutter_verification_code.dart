@@ -112,7 +112,7 @@ class _VerificationCodeState extends State<VerificationCode> {
     print('setInputItemText value=>$value');
     if(value!=null){
       for(int i=0; i< value.length;i++){
-        String s= code[i];
+        String s= value[i];
         print('setInputItemText i=$i s=>$s');
         setState(() {
           _listControllerText[i].text(s);
